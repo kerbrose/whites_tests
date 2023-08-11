@@ -1,0 +1,17 @@
+<odoo>
+  
+  <record id="view_form_product_product_ref2" model="ir.ui.view">
+    <field name="name">view.form.product.product.ref2</field>
+    <field name="model">product.product</field>
+    <field name="inherit_id" ref="product.product_normal_form_view"/>
+    <field name="priority" eval="100" />
+    <field name="arch" type="xml">
+      
+      <xpath expr="//field[@name='default_code']" position="after">
+        <field name="code2" />
+      </xpath>
+
+    </field>
+  </record>
+
+</odoo>

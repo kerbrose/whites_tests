@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+
+  <t t-name="ProductItem" t-inherit="point_of_sale.ProductItem" t-inherit-mode="extension" owl="1">
+
+    <xpath expr="//div[hasclass('product-name')]" position="inside">
+      <br />
+      <span t-esc="props.product.code2" />
+    </xpath>
+
+    <xpath expr="//article" position="attributes">
+      <attribute name="t-on-click">andrewtate</attribute>
+    </xpath>
+
+  </t>
+
+  <t t-name="OrderLinesReceipt" t-inherit="point_of_sale.OrderLinesReceipt" t-inherit-mode="extension" owl="1">
+
+    <xpath expr="//WrappedProductNameLines" position="after">
+      <t t-esc="line.code2" />
+    </xpath>
+
+  </t>
+
+</templates>
